@@ -51,7 +51,7 @@ def main():
         print('Usage: task.py <dna sequence>')
         exit()
     seq = str(sys.argv[1])
-    print(translation(seq))
+    translation(seq)
 
 
 if __name__ == '__main__':
