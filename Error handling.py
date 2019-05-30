@@ -19,6 +19,10 @@ def process_file(filename, SNP):
             for line in f:
                 line = line.strip()
                 seq_id = re.split(r'\s+', line)[0]
+                
+                if num_of_mut > len(line):
+                    print('X in SNPX is bigger than the length of the shortest string in a file')
+                    num_of_mut = len(line)
 
                 for num in range(1, num_of_mut + 1):
 
