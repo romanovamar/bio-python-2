@@ -32,7 +32,17 @@ for key,val in dict.items():
 
 # 3
 
-
+ions = (1988.21104821,610.391039105,738.485999105,766.492149105,863.544909105,867.528589105,992.587499105,995.623549105,1120.6824591,1124.6661391,1221.7188991,1249.7250491,1377.8200091)
+count = 0
+for i in range(1, len(ions)):
+    for f in range(i + 1, len(ions)):
+        for key, val in dict.items():
+            if round(ions[f] - ions[i],4) == round(val,4):
+                while count != 5:
+                    print(key)
+                    i=f
+                    count += 1
+                    break
 
 
 
